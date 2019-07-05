@@ -1,3 +1,6 @@
+const authController = require('./controllers/auth');
+
 module.exports.set = app => {
-  //endpoints will be here soon
+  app.post('/login', authController.login);
+  app.post('/register', authController.register);
 }
