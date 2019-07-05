@@ -3,7 +3,9 @@ const Sequelize = require('sequelize');
 var sequelize = new Sequelize(config.dbConnectionString);
 // require('sequelize-values')(sequelize);
 
-sequelize.sync()
+sequelize.sync(
+//  {force: true}
+)
   .then(() => {
     console.log('Sequelize updated database schema')
   })
