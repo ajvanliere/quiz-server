@@ -7,7 +7,7 @@ const getUserByLogin = login => Users.findOne({where: {login}});
 
 const getUsersWithScores = () => {
 	return Users.findAll({
-		attributes: ['login', 'id'],
+		attributes: ['login', 'id', 'name'],
 		include: [{
 			model: Scores,
 			as: 'scores',
