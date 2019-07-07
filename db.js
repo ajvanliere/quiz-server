@@ -1,7 +1,8 @@
 const config = require('./config');
 const Sequelize = require('sequelize');
-var sequelize = new Sequelize(config.dbConnectionString);
-// require('sequelize-values')(sequelize);
+require('sequelize-values')(Sequelize);
+
+const sequelize = new Sequelize(config.dbConnectionString);
 
 sequelize.sync(
 //  {force: true}
