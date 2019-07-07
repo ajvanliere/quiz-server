@@ -17,8 +17,14 @@ const getUsersWithScores = () => {
 	.then(sequelize.getValues);
 }
 
+const getUsers = () => {
+  return Users.findAll()
+  .then(sequelize.getValues)
+}
+
 module.exports = {
 	addUser,
 	getUsersWithScores,
-	getUserByLogin
+  getUserByLogin,
+  getUsers
 }

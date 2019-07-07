@@ -11,4 +11,5 @@ module.exports.set = (app) => {
   app.get('/scores/:id', authMiddleware.checkAuth, scoreController.getScore);
   app.post('/scores', authMiddleware.checkAuth, scoreController.addScore);
   app.get('/user_scores', authMiddleware.checkAuth, userController.getUsersWithScores);
+  app.get('/users', authMiddleware.checkAuth, userController.getUsers);
 }
